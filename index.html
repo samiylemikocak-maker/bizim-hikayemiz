@@ -1,0 +1,73 @@
+HTML
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seni Çok Seviyorum ❤️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 90%;
+            width: 400px;
+            margin: 20px;
+        }
+        h1 { color: #e63946; font-size: 26px; }
+        .counter {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d62828;
+            margin: 20px 0;
+            padding: 15px;
+            background: #ffe5ec;
+            border-radius: 12px;
+        }
+        p { font-size: 16px; line-height: 1.5; color: #555; }
+        .heart { font-size: 40px; animation: beat 1s infinite alternate; }
+        @keyframes beat { to { transform: scale(1.2); } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>Bizim Hikayemiz</h1>
+        <p>Seninle geçen her anım ilk günkü gibi özel...</p>
+        
+        <div class="counter" id="timer">Yükleniyor...</div>
+
+        <p>İyi ki hayatımdasın! ✨</p>
+    </div>
+
+    <script>
+        // TANIŞMA TARİHİNİZİ BURAYA YAZIN (Yıl, Ay-1, Gün)
+        // NOT: Ocak=0, Şubat=1, Mart=2 ... Ağustos=7
+        const startDate = new Date(2024, 7, 9); 
+
+        function updateCounter() {
+            const now = new Date();
+            const diff = now - startDate;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("timer").innerText = days + " Gündür Birlikteyiz ❤️";
+        }
+
+        updateCounter();
+    </script>
+</body>
+</html>
