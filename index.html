@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seni Çok Seviyorum ❤️</title>
+    <title>Bizim Hikayemiz ❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -11,187 +11,182 @@
             margin: 0;
             padding: 0;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%);
+            background: #fff5f6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* ORTAK SAYFA YAPISI */
+        .page {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 30px 15px;
-            color: #333;
-        }
-        .main-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 35px 25px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            padding: 40px 20px;
             text-align: center;
-        }
-        h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 38px;
-            color: #e63946;
-            margin-bottom: 10px;
-        }
-        .sub-title {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
-        }
-        .heart-badge {
-            font-size: 50px;
-            margin-bottom: 15px;
-            display: inline-block;
-            animation: pulse 1.2s infinite alternate;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.18); }
+            position: relative;
         }
 
-        /* ALBÜM GALERİSİ */
-        .photo-gallery {
-            display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            padding: 10px 5px 20px 5px;
+        /* 1. SAYFA - GİRİŞ */
+        #page1 {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            color: #fff;
+        }
+        .hero-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 52px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+        }
+        .hero-sub {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            font-size: 13px;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        /* 2. SAYFA - SAYAÇ */
+        #page2 {
+            background: #ffffff;
+        }
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            color: #e63946;
             margin-bottom: 25px;
-            scroll-snap-type: x mandatory;
         }
-        .photo-gallery::-webkit-scrollbar {
-            height: 6px;
+        .timer-grid {
+            display: flex;
+            gap: 12px;
+            max-width: 450px;
+            width: 100%;
         }
-        .photo-gallery::-webkit-scrollbar-thumb {
-            background: #ff4d6d;
-            border-radius: 10px;
+        .time-box {
+            background: #ffe5ec;
+            border: 2px solid #ffb3c1;
+            padding: 18px 8px;
+            border-radius: 18px;
+            flex: 1;
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.1);
+        }
+        .time-box .num {
+            font-size: 26px;
+            font-weight: 700;
+            color: #c9184a;
+            display: block;
+        }
+        .time-box .label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        /* 3. SAYFA - FOTOĞRAF GALERİSİ (IZGARA DÜZENİ) */
+        #page3 {
+            background: #fff0f3;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            max-width: 500px;
+            width: 100%;
+            margin-top: 15px;
         }
         .photo-card {
-            min-width: 240px;
-            height: 300px;
-            border-radius: 18px;
+            width: 100%;
+            height: 160px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-            scroll-snap-align: center;
-            background: #eee;
-            border: 4px solid #fff;
-            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 3px solid #fff;
+            background: #fff;
         }
         .photo-card img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Fotoğrafların oranını bozmadan sığdırır */
         }
 
-        /* DİJİTAL SAYAÇ */
-        .timer-title {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #888;
-            margin-bottom: 12px;
-        }
-        .timer-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 8px;
-            margin-bottom: 30px;
-        }
-        .time-box {
-            background: #fff0f3;
-            border: 1px solid #ffccd5;
-            padding: 12px 6px;
-            border-radius: 16px;
-            flex: 1;
-            box-shadow: 0 4px 10px rgba(230, 57, 70, 0.08);
-        }
-        .time-box .num {
-            font-size: 22px;
-            font-weight: 700;
-            color: #d62828;
-            display: block;
-        }
-        .time-box .label {
-            font-size: 11px;
-            color: #777;
-            margin-top: 2px;
-        }
-
-        /* NOTLAR */
-        .love-notes {
-            text-align: left;
-            margin-top: 25px;
+        /* 4. SAYFA - NOTLAR VE MÜZİK */
+        #page4 {
+            background: linear-gradient(135deg, #ffccd5 0%, #ff4d6d 100%);
+            color: #fff;
         }
         .note-card {
-            background: #f8f9fa;
-            border-left: 4px solid #ff4d6d;
-            padding: 15px;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 18px;
+            border-radius: 16px;
             margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #444;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            max-width: 450px;
+            width: 100%;
+            text-align: left;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         .note-card strong {
             color: #c9184a;
             display: block;
             margin-bottom: 4px;
-            font-size: 15px;
+            font-size: 16px;
         }
-
-        /* MÜZİK ÇALAR */
         .music-box {
-            margin-top: 25px;
-            padding: 15px;
             background: #fff;
-            border-radius: 16px;
-            border: 1px solid #eee;
+            color: #333;
+            padding: 15px;
+            border-radius: 20px;
+            max-width: 450px;
+            width: 100%;
+            margin-top: 10px;
         }
         .music-box p {
-            font-size: 13px;
             font-weight: 600;
             color: #e63946;
             margin-bottom: 8px;
+            font-size: 13px;
         }
         audio {
             width: 100%;
             height: 36px;
         }
-        .footer-text {
-            margin-top: 25px;
-            font-size: 13px;
-            color: #888;
-            font-style: italic;
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
     </style>
 </head>
 <body>
 
-    <div class="main-card">
-        <div class="heart-badge">💖</div>
-        <h1>Bizim Hikayemiz</h1>
-        <p class="sub-title">12 Ekim 2024'ten beri hayatımın en güzel hediyesi...</p>
+    <!-- 1. SAYFA: GİRİŞ -->
+    <div class="page" id="page1">
+        <div style="font-size: 60px; margin-bottom: 10px;">💖</div>
+        <h1 class="hero-title">Bizim Hikayemiz</h1>
+        <p class="hero-sub">Seni Sevmenin En Güzel Hali...</p>
+        <a href="#page2" style="color: inherit; text-decoration: none;">
+            <div class="scroll-down">Aşağı Kaydır ↓</div>
+        </a>
+    </div>
 
-        <!-- YÜKLEDİĞİN FOTOĞRAFLAR -->
-        <div class="photo-gallery">
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (1).jpeg" alt="Biz 1"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (2).jpeg" alt="Biz 2"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (3).jpeg" alt="Biz 3"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (4).jpeg" alt="Biz 4"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (5).jpeg" alt="Biz 5"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (6).jpeg" alt="Biz 6"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (7).jpeg" alt="Biz 7"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42.jpeg" alt="Biz 8"></div>
-            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.43.jpeg" alt="Biz 9"></div>
-        </div>
-
-        <div class="timer-title">Birlikte Geçen Süre</div>
+    <!-- 2. SAYFA: SAYAÇ -->
+    <div class="page" id="page2">
+        <h2 class="section-title">Birlikte Geçen Süre</h2>
         <div class="timer-grid">
             <div class="time-box">
                 <span class="num" id="days">0</span>
@@ -210,33 +205,52 @@
                 <span class="label">Saniye</span>
             </div>
         </div>
+        <a href="#page3" style="color: inherit; text-decoration: none;">
+            <div class="scroll-down" style="color: #e63946; background: #ffe5ec;">Anılarımıza Bak ↓</div>
+        </a>
+    </div>
 
-        <div class="love-notes">
-            <div class="note-card">
-                <strong>İyi Ki Sen ❤️</strong>
-                Hayatıma girdiğin ilk andan itibaren her günümü daha anlamlı, daha huzurlu ve daha renkli kıldın.
-            </div>
-            <div class="note-card">
-                <strong>Gülüşün Dünyaya Bedel ✨</strong>
-                Seninle kahkaha atmak da, sessizce yan yana oturmak da dünyadaki en güzel şey.
-            </div>
-            <div class="note-card">
-                <strong>Sonsuza Dek ♾️</strong>
-                Geçmişteki her güzel anımız için minnettarım, gelecekte biriktireceğimiz tüm anılar için sabırsızım.
-            </div>
+    <!-- 3. SAYFA: FOTOĞRAFLAR -->
+    <div class="page" id="page3">
+        <h2 class="section-title">En Güzel Anlarımız</h2>
+        <div class="photo-grid">
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (1).jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (2).jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (3).jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (4).jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (5).jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (6).jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42 (7).jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.42.jpeg" alt="Foto"></div>
+            <div class="photo-card"><img src="WhatsApp Image 2026-08-09 at 00.36.43.jpeg" alt="Foto"></div>
+        </div>
+        <a href="#page4" style="color: inherit; text-decoration: none; margin-top: 20px;">
+            <div class="scroll-down" style="color: #e63946; background: #fff;">Sana Notum Var ↓</div>
+        </a>
+    </div>
+
+    <!-- 4. SAYFA: NOTLAR VE ŞARKI -->
+    <div class="page" id="page4">
+        <h2 class="section-title" style="color: #fff;">Seni Çok Seviyorum</h2>
+        
+        <div class="note-card">
+            <strong>İyi Ki Sen ❤️</strong>
+            Hayatıma girdiğin ilk andan itibaren her günümü daha anlamlı ve huzurlu kıldın.
+        </div>
+        <div class="note-card">
+            <strong>Gülüşün Dünyaya Bedel ✨</strong>
+            Seninle kahkaha atmak da, sessizce yan yana oturmak da dünyadaki en güzel şey.
+        </div>
+        <div class="note-card">
+            <strong>Sonsuza Dek ♾️</strong>
+            Birlikte biriktireceğimiz daha nice anılara...
         </div>
 
-        <!-- YÜKLEDİĞİN MÜZİK -->
         <div class="music-box">
             <p>🎵 Timeless - The Weeknd & Playboi Carti</p>
             <audio controls loop>
                 <source src="Zamansız (Playboi Carti ile).mp3" type="audio/mpeg">
-                Tarayıcınız müzik çaları desteklemiyor.
             </audio>
-        </div>
-
-        <div class="footer-text">
-            Seni her geçen gün daha çok seviyorum... ❤️
         </div>
     </div>
 
