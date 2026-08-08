@@ -1,26 +1,16 @@
+HTML
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bizim Hikayemiz ❤️</title>
+    <title>Sami & Eslem ❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            overflow-x: hidden;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
 
-        /* GENEL BÖLÜM YAPISI */
         .story-section {
             min-height: 100vh;
             display: flex;
@@ -31,7 +21,6 @@
             text-align: center;
         }
 
-        /* 10 FARKLI RENKLİ ARKA PLAN */
         .bg-1 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #fff; }
         .bg-2 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); color: #2c3e50; }
         .bg-3 { background: linear-gradient(135deg, #ffb3c1 0%, #ffe5ec 100%); color: #590d22; }
@@ -44,9 +33,8 @@
         .bg-10 { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); color: #fff; }
         .bg-final { background: linear-gradient(135deg, #2b2d42 0%, #111827 100%); color: #fff; }
 
-        /* KART DÜZENİ */
         .card {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(8px);
             border-radius: 24px;
             padding: 25px;
@@ -87,12 +75,7 @@
             font-weight: 400;
         }
 
-        /* SAYAÇ BÖLÜMÜ */
-        .timer-grid {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
+        .timer-grid { display: flex; gap: 10px; margin-top: 20px; }
         .time-box {
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -100,15 +83,8 @@
             border-radius: 16px;
             flex: 1;
         }
-        .time-box .num {
-            font-size: 24px;
-            font-weight: 700;
-            display: block;
-        }
-        .time-box .label {
-            font-size: 11px;
-            opacity: 0.8;
-        }
+        .time-box .num { font-size: 24px; font-weight: 700; display: block; }
+        .time-box .label { font-size: 11px; opacity: 0.8; }
 
         .music-box {
             background: #fff;
@@ -119,143 +95,117 @@
             width: 100%;
             margin-top: 20px;
         }
-        audio {
-            width: 100%;
-            height: 36px;
-        }
+        audio { width: 100%; height: 36px; }
     </style>
 </head>
 <body>
 
-    <!-- GİRİŞ -->
     <div class="story-section bg-1">
         <div style="font-size: 60px; margin-bottom: 10px;">💖</div>
-        <h1 style="font-family: 'Dancing Script', cursive; font-size: 50px;">Bizim Hikayemiz</h1>
-        <p style="margin-top: 10px; font-size: 16px;">12 Ekim 2024'ten beri her anımız özel...</p>
+        <h1 style="font-family: 'Dancing Script', cursive; font-size: 48px;">Sami & Eslem</h1>
+        <p style="margin-top: 10px; font-size: 16px;">12 Ekim 2024'ten beri bizim hikayemiz...</p>
         <p style="margin-top: 30px; font-size: 13px; opacity: 0.8;">Aşağıya Kaydır ↓</p>
     </div>
 
-    <!-- 1. FOTOĞRAF -->
     <div class="story-section bg-2">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42 (1).jpeg" alt="Anı 1">
             </div>
             <h2>İlk Adım ✨</h2>
-            <p class="note">Hayatıma girdiğin o ilk günü dün gibi hatırlıyorum. Bakışların, gülüşün ve bana verdiğin o ilk huzur hissi... İyi ki o gün yollarımız kesişmiş ve iyi ki hayatımın parçası olmuşsun.</p>
+            <p class="note">Hayatıma girdiğin o ilk günü dün gibi hatırlıyorum Eslem. Bakışların, gülüşün ve bana verdiğin o ilk huzur hissi... İyi ki yollarımız kesişmiş.</p>
         </div>
     </div>
 
-    <!-- 2. FOTOĞRAF -->
     <div class="story-section bg-3">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42 (2).jpeg" alt="Anı 2">
             </div>
             <h2>Gülüşün Dünyaya Bedel ❤️</h2>
-            <p class="note">Sen güldüğünde etraftaki her şey anlamını yitiriyor benim için. Yanındayken ne derdim kalıyor ne de bir kaygım. Sadece senin neşenle dolup taşıyorum.</p>
+            <p class="note">Sen güldüğünde etraftaki her şey anlamını yitiriyor benim için. Yanındayken ne derdim kalıyor ne kaygım. Sadece senin neşenle doluyorum.</p>
         </div>
     </div>
 
-    <!-- 3. FOTOĞRAF -->
     <div class="story-section bg-4">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42 (3).jpeg" alt="Anı 3">
             </div>
             <h2>Huzur Bulduğum Yer 🌿</h2>
-            <p class="note">Senin yanında geçirdiğim her dakika, bana sığınacak en güvenli limanı bulduğumu hissettiriyor. Yanında sessizce otursak bile içim sıcacık oluyor.</p>
+            <p class="note">Senin yanında geçirdiğim her dakika, bana sığınacak en güvenli limanı bulduğumu hissettiriyor. Yanında sessizce otursak bile içim sıcacık.</p>
         </div>
     </div>
 
-    <!-- 4. FOTOĞRAF -->
     <div class="story-section bg-5">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42 (4).jpeg" alt="Anı 4">
             </div>
             <h2>Unutulmaz Anılar 📸</h2>
-            <p class="note">Birlikte çektiğimiz her fotoğrafta sadece bir kare değil, kocaman bir mutluluk saklı. Bu anıları biriktirmek benim bu dünyadaki en büyük şansım.</p>
+            <p class="note">Birlikte çektiğimiz her fotoğrafta sadece bir kare değil, kocaman bir mutluluk saklı. Bu anıları biriktirmek benim en büyük şansım.</p>
         </div>
     </div>
 
-    <!-- 5. FOTOĞRAF -->
     <div class="story-section bg-6">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42 (5).jpeg" alt="Anı 5">
             </div>
             <h2>En İyi Yol Arkadaşım 🤝</h2>
-            <p class="note">Sadece sevgilim değil, aynı zamanda en yakın dostum, sırdaşım ve her anımda sığındığım en değerli kişisin. Hayat seninle çok daha kolay ve güzel.</p>
+            <p class="note">Sadece sevgilim değil; en yakın dostum, sırdaşım ve her anımda sığındığım en değerli kişisin. Hayat seninle çok daha güzel.</p>
         </div>
     </div>
 
-    <!-- 6. FOTOĞRAF -->
     <div class="story-section bg-7">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42 (6).jpeg" alt="Anı 6">
             </div>
             <h2>Renklendiren Dokunuş 🎨</h2>
-            <p class="note">Sen hayatıma girmeden önce her şey siyah beyazmış gibi sanki. Şimdi baktığım her yerde senin rengin, senin enerjin ve senin sevgin var.</p>
+            <p class="note">Sen hayatıma girmeden önce her şey renksizmiş sanki. Şimdi baktığım her yerde senin enerjin ve sevgini hissetmek harika bir duygu.</p>
         </div>
     </div>
 
-    <!-- 7. FOTOĞRAF -->
     <div class="story-section bg-8">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42 (7).jpeg" alt="Anı 7">
             </div>
             <h2>Sonsuz Güven 🔒</h2>
-            <p class="note">Bana verdiğin o koşulsuz sevgi ve güven hissi için sana minnettarım. Kalbimin en özel, en dokunulmaz yeri her zaman tamamen sana ait.</p>
+            <p class="note">Bana verdiğin o koşulsuz sevgi ve güven için minnettarım. Kalbimin en özel, en dokunulmaz yeri her zaman tamamen sana ait.</p>
         </div>
     </div>
 
-    <!-- 8. FOTOĞRAF -->
     <div class="story-section bg-9">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.42.jpeg" alt="Anı 8">
             </div>
             <h2>Her Gün Yeniden... 💫</h2>
-            <p class="note">Seni her sabah yeniden sevmeyi seçiyorum. Zaman geçtikçe sevgim azalmıyor, aksine seninle yaşadığımız her yeni anıyla daha da büyüyor.</p>
+            <p class="note">Seni her gün yeniden sevmeyi seçiyorum. Zaman geçtikçe sevgim azalmıyor, aksine yaşadığımız her yeni anıyla daha da büyüyor.</p>
         </div>
     </div>
 
-    <!-- 9. FOTOĞRAF -->
     <div class="story-section bg-10">
         <div class="card">
             <div class="photo-frame">
                 <img src="WhatsApp Image 2026-08-09 at 00.36.43.jpeg" alt="Anı 9">
             </div>
             <h2>Geleceğimize... ♾️</h2>
-            <p class="note">Geride bıraktığımız güzel günlerin hepsi sadece harika bir başlangıçtı. Önümüzde birlikte yaşayacağımız, hayallerimizi kuracağımız daha binlerce gün var.</p>
+            <p class="note">Geride bıraktığımız güzel günlerin hepsi harika bir başlangıçtı. Önümüzde birlikte yaşayacağımız daha binlerce güzel gün var.</p>
         </div>
     </div>
 
-    <!-- FİNAL VE SAYAÇ -->
     <div class="story-section bg-final">
         <h2 style="font-family: 'Dancing Script', cursive; font-size: 42px; color: #ff758c; margin-bottom: 10px;">Birlikte Geçen Süre</h2>
         <p style="margin-bottom: 20px; font-size: 14px; opacity: 0.9;">12 Ekim 2024'ten beri geçen her saniye çok değerli...</p>
 
         <div class="timer-grid" style="max-width: 450px; width: 100%;">
-            <div class="time-box">
-                <span class="num" id="days">0</span>
-                <span class="label">Gün</span>
-            </div>
-            <div class="time-box">
-                <span class="num" id="hours">0</span>
-                <span class="label">Saat</span>
-            </div>
-            <div class="time-box">
-                <span class="num" id="minutes">0</span>
-                <span class="label">Dakika</span>
-            </div>
-            <div class="time-box">
-                <span class="num" id="seconds">0</span>
-                <span class="label">Saniye</span>
-            </div>
+            <div class="time-box"><span class="num" id="days">0</span><span class="label">Gün</span></div>
+            <div class="time-box"><span class="num" id="hours">0</span><span class="label">Saat</span></div>
+            <div class="time-box"><span class="num" id="minutes">0</span><span class="label">Dakika</span></div>
+            <div class="time-box"><span class="num" id="seconds">0</span><span class="label">Saniye</span></div>
         </div>
 
         <div class="music-box">
@@ -265,28 +215,19 @@
             </audio>
         </div>
 
-        <p style="margin-top: 30px; font-style: italic; font-size: 13px; opacity: 0.7;">Seni Çok Seviyorum... ❤️</p>
+        <p style="margin-top: 30px; font-style: italic; font-size: 13px; opacity: 0.7;">Seni Çok Seviyorum Eslem... ❤️</p>
     </div>
 
     <script>
-        // Tanışma Tarihi: 12 Ekim 2024
         const startDate = new Date(2024, 9, 12, 0, 0, 0); 
-
         function updateTimer() {
             const now = new Date();
             const diff = now - startDate;
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((diff / 1000 / 60) % 60);
-            const seconds = Math.floor((diff / 1000) % 60);
-
-            document.getElementById("days").innerText = days;
-            document.getElementById("hours").innerText = hours;
-            document.getElementById("minutes").innerText = minutes;
-            document.getElementById("seconds").innerText = seconds;
+            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            document.getElementById("minutes").innerText = Math.floor((diff / 1000 / 60) % 60);
+            document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
         }
-
         setInterval(updateTimer, 1000);
         updateTimer();
     </script>
